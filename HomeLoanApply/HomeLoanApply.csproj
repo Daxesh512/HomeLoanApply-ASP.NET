@@ -1,0 +1,270 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFE42F65-377B-4F23-A0FA-895AB83C9C2F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomeLoanApply</RootNamespace>
+    <AssemblyName>HomeLoanApply</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44386</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Loan.mdf" />
+    <Content Include="App_Data\Loan_log.ldf">
+      <DependentUpon>Loan.mdf</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="HomeLoan\assets\css\style-starter.css" />
+    <Content Include="HomeLoan\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="HomeLoan\assets\images\404.svg" />
+    <Content Include="HomeLoan\assets\images\about.jpg" />
+    <Content Include="HomeLoan\assets\images\about1.jpg" />
+    <Content Include="HomeLoan\assets\images\banner.jpg" />
+    <Content Include="HomeLoan\assets\images\client1.png" />
+    <Content Include="HomeLoan\assets\images\client2.png" />
+    <Content Include="HomeLoan\assets\images\client3.png" />
+    <Content Include="HomeLoan\assets\images\client4.png" />
+    <Content Include="HomeLoan\assets\images\client5.png" />
+    <Content Include="HomeLoan\assets\images\client6.png" />
+    <Content Include="HomeLoan\assets\images\down.png" />
+    <Content Include="HomeLoan\assets\images\l1.jpg" />
+    <Content Include="HomeLoan\assets\images\l2.jpg" />
+    <Content Include="HomeLoan\assets\images\l3.jpg" />
+    <Content Include="HomeLoan\assets\images\l4.jpg" />
+    <Content Include="HomeLoan\assets\images\l5.jpg" />
+    <Content Include="HomeLoan\assets\images\p1.jpg" />
+    <Content Include="HomeLoan\assets\images\p2.jpg" />
+    <Content Include="HomeLoan\assets\images\p3.jpg" />
+    <Content Include="HomeLoan\assets\images\p4.jpg" />
+    <Content Include="HomeLoan\assets\images\p5.jpg" />
+    <Content Include="HomeLoan\assets\images\p6.jpg" />
+    <Content Include="HomeLoan\assets\images\p7.jpg" />
+    <Content Include="HomeLoan\assets\images\p8.jpg" />
+    <Content Include="HomeLoan\assets\images\single.jpg" />
+    <Content Include="HomeLoan\assets\images\stats.jpg" />
+    <Content Include="HomeLoan\assets\images\team1.jpg" />
+    <Content Include="HomeLoan\assets\images\team2.jpg" />
+    <Content Include="HomeLoan\assets\images\team3.jpg" />
+    <Content Include="HomeLoan\assets\images\team4.jpg" />
+    <Content Include="HomeLoan\assets\images\team5.jpg" />
+    <Content Include="HomeLoan\assets\images\team6.jpg" />
+    <Content Include="HomeLoan\assets\images\who.jpg" />
+    <Content Include="HomeLoan\assets\images\who1.jpg" />
+    <Content Include="HomeLoan\assets\js\bootstrap.min.js" />
+    <Content Include="HomeLoan\assets\js\jquery-3.3.1.min.js" />
+    <Content Include="HomeLoan\assets\js\jquery.countup.js" />
+    <Content Include="HomeLoan\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="HomeLoan\assets\js\jquery.waypoints.min.js" />
+    <Content Include="HomeLoan\assets\js\owl.carousel.js" />
+    <Content Include="HomeLoan\assets\js\theme-change.js" />
+    <Content Include="HomeLoan\Home.aspx" />
+    <Content Include="HomeLoan\About.aspx" />
+    <Content Include="HomeLoan\Gallery.aspx" />
+    <Content Include="HomeLoan\Contact.aspx" />
+    <Content Include="HomeLoan\Registration.aspx" />
+    <Content Include="HomeLoan\Login.aspx" />
+    <Content Include="Loan\css\font-awesome.min.css" />
+    <Content Include="Loan\css\style.css" />
+    <Content Include="Loan\fonts\fontawesome-webfont.svg" />
+    <Content Include="Loan\images\1.png" />
+    <Content Include="Loan\images\undraw_Work_time_re_hdyv.svg" />
+    <Content Include="Loan\MainPage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLoan\UserMaster.Master.cs">
+      <DependentUpon>UserMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeLoan\UserMaster.Master.designer.cs">
+      <DependentUpon>UserMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLoan\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeLoan\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLoan\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeLoan\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLoan\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeLoan\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLoan\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeLoan\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLoan\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeLoan\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLoan\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeLoan\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loan\MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loan\MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HomeLoan\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="HomeLoan\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="HomeLoan\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="HomeLoan\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="HomeLoan\assets\fonts\FontAwesome.otf" />
+    <Content Include="HomeLoan\UserMaster.Master" />
+    <Content Include="Loan\fonts\fontawesome-webfont.eot" />
+    <Content Include="Loan\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Loan\fonts\fontawesome-webfont.woff" />
+    <Content Include="Loan\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Loan\fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53937</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44386/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
